@@ -11,6 +11,8 @@ const config = require("./config/config");
 
 const errorHandler = require("./middleware/error-handler");
 
+const coursesRoutes = require("./routes/courses");
+
 const app = express();
 
 /* The `cors()` function is a middleware function that enables Cross-Origin Resource Sharing
@@ -45,6 +47,7 @@ if (config.NODE_ENV === "Development") {
 /*
  * Routes
  */
+app.use("/api/courses", coursesRoutes);
 
 /* `errorHandler` is registering the `errorHandler` middleware function with the Express
 application. */
