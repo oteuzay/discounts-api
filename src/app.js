@@ -11,7 +11,9 @@ const config = require("./config/config");
 
 const errorHandler = require("./middleware/error-handler");
 
+const categoriesRoutes = require("./routes/categories");
 const coursesRoutes = require("./routes/courses");
+const authRoutes = require("./routes/auth");
 
 const app = express();
 
@@ -47,7 +49,9 @@ if (config.NODE_ENV === "Development") {
 /*
  * Routes
  */
+app.use("/api/categories", categoriesRoutes);
 app.use("/api/courses", coursesRoutes);
+app.use("/api/auth", authRoutes);
 
 /* `errorHandler` is registering the `errorHandler` middleware function with the Express
 application. */
