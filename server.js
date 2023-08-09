@@ -1,10 +1,10 @@
-const app = require("./src/app");
+const app = require("./app");
 
-const config = require("./src/config/config");
+const config = require("./config/config");
 
-const sequelize = require("./src/config/database");
+const sequelize = require("./config/database");
 
-const logger = require("./src/utils/logger");
+const logger = require("./utils/logger");
 
 /* Synchronizing the Sequelize models with the database and starting the server. */
 sequelize
