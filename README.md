@@ -2,7 +2,7 @@
 
 Effortlessly and conveniently share the available discounts for various udemy courses using the functionality provided by this API.
 
-### Installation
+## Installation
 
 You can get the project up and running by following the steps below.
 
@@ -28,17 +28,20 @@ Make sure to fill in your actual configuration details in the .env file before r
   npm run dev
 ```
 
-### Documentation
+## Documentation
+
 When you set NODE_ENV to Development in your environment variables, you gain access to the Swagger documentation.
 
 The Swagger documentation can be found at the following endpoint:
 
 `/api-docs`
 
-### Issues
+## Issues
+
 Feel free to create an issue in our repository for any problems, questions, or feedback you have.
 
-### Contributing
+## Contributing
+
 We welcome contributions, new features, improvements, and feedback.
 
 Please fork the repository, make your changes, and submit a pull request for consideration.
