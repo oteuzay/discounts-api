@@ -7,6 +7,8 @@ const router = require("express").Router();
 
 const isAuth = require("../middleware/is-auth");
 
+const coursesValidator = require("../validators/courses");
+
 const coursesController = require("../controllers/courses");
 
 /**
@@ -25,7 +27,7 @@ const coursesController = require("../controllers/courses");
  *       500:
  *         description: Internal Server Error
  */
-router.get("/", coursesController.getCourses);
+router.get("/", coursesValidator.getCourses, coursesController.getCourses);
 
 /**
  * @swagger
@@ -46,7 +48,7 @@ router.get("/", coursesController.getCourses);
  *       500:
  *         description: Internal Server Error
  */
-router.get("/:id", coursesController.getCourse);
+router.get("/:id", coursesValidator.getCourse, coursesController.getCourse);
 
 /**
  * @swagger
@@ -80,7 +82,12 @@ router.get("/:id", coursesController.getCourse);
  *       500:
  *         description: Internal Server Error
  */
-router.post("/", isAuth, coursesController.createCourse);
+router.post(
+  "/",
+  isAuth,
+  coursesValidator.createCourse,
+  coursesController.createCourse
+);
 
 /**
  * @swagger
@@ -107,6 +114,11 @@ router.post("/", isAuth, coursesController.createCourse);
  *       500:
  *         description: Internal Server Error
  */
-router.delete("/:id", isAuth, coursesController.deleteCourse);
+router.delete(
+  "/:id",
+  isAuth,
+  coursesValidator.deleteCourse,
+  coursesController.deleteCourse
+);
 
 module.exports = router;
