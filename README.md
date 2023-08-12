@@ -2,6 +2,20 @@
 
 Effortlessly and conveniently share the available discounts for various udemy courses using the functionality provided by this API.
 
+## Stack
+
+| Category            | Dependency                                                                                                                   |
+|---------------------|------------------------------------------------------------------------------------------------------------------------------|
+| Web Framework       | [Express Framework](https://expressjs.com/)                                                                                 |
+| ORM & Database      | [Sequelize](https://sequelize.org/) - [Pg](https://www.npmjs.com/package/pg)                                                 |
+| Validator           | [Express Validator](https://express-validator.github.io/docs)                                                               |
+| Authentication      | [JWT](https://www.npmjs.com/package/jsonwebtoken)                                                                  |
+| Logging             | [Winston](https://github.com/winstonjs/winston)                                                                             |
+| Documentation       | [Swagger](https://swagger.io/)                                                                                             |
+| Security            | [Bcrypt.js](https://www.npmjs.com/package/bcryptjs) - [Helmet](https://helmetjs.github.io/)                                |
+| HTTP Client         | [Axios](https://axios-http.com/)                                                                                           |
+| Others              | [Cors](https://www.npmjs.com/package/cors) - [Compression](https://www.npmjs.com/package/compression) - [Dotenv](https://github.com/motdotla/dotenv) - [Nodemon](https://github.com/remy/nodemon) |
+
 ## Installation
 
 You can get the project up and running by following the steps below.
